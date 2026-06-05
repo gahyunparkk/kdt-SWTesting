@@ -40,7 +40,9 @@ The system is intended to combine sensor inputs, decision logic, and alert deliv
 2. Run the test and confirm it fails for the expected reason.
 3. Implement the production code.
 4. Run the full test suite.
-5. Refactor only after tests pass.
+5. Update `docs/traceability.md` when requirement coverage changes.
+6. Update `memory.md` when a project decision or assumption changes.
+7. Refactor only after tests pass.
 
 Recommended commands:
 
@@ -78,11 +80,32 @@ Branch rules:
 Every PR should include:
 
 - Purpose of the change.
+- Requirement IDs covered by the change.
 - Tests added or changed.
 - Safety assumptions affected by the change.
 - Any known limitations.
 
 For behavior changes, include or update tests before implementation code.
+
+## Traceability
+
+Bidirectional traceability is maintained in:
+
+```text
+docs/traceability.md
+```
+
+Each requirement should map forward to planned or actual tests and implementation files. Each test or implementation file should map backward to the requirement IDs it supports.
+
+## Project Memory
+
+Project memory is active in:
+
+```text
+memory.md
+```
+
+Use it to record durable decisions, assumptions, current status, and next steps that future agents should preserve.
 
 ## CI Validation
 
