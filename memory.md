@@ -33,11 +33,13 @@ Build a Python-based, TDD-driven vehicle occupancy alert system that detects pos
 - Bidirectional traceability matrix exists.
 - M1 domain model and sensor abstractions are implemented.
 - M1 tests cover vehicle state derivation, sensor reading validation, sensor health, and deterministic simulation scenarios.
+- M2 occupancy inference and debounce-based false alarm suppression are implemented.
+- M2 tests cover high-confidence presence, no occupancy, contradictory signals, unknown empty inputs, transient suppression, stable presence, and low-confidence reset.
 
 ## Next Steps
 
 1. Create `develop` branch and protect `main` in repository settings.
-2. Implement M2 occupancy inference using TDD.
+2. Implement M3 risk evaluation using TDD.
 3. Update traceability status as tests and implementation are added.
 4. Add release notes for `v0.1.0` when M1-M4 behavior is usable.
 
